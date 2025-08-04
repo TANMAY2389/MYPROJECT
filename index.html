@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Gallery</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for the body to ensure the gradient fills the entire viewport */
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #4c669f, #7f6a9e, #a76a8b);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Smooth scroll for navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar styling for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white bg-opacity-10 backdrop-blur-sm p-4 shadow-lg rounded-b-xl transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-white hover:text-gray-200 transition-colors">My Gallery</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#drawings" class="text-white hover:text-gray-200 transition-colors">Drawings</a>
+                <a href="#projects" class="text-white hover:text-gray-200 transition-colors">Projects</a>
+                <a href="#contact" class="text-white hover:text-gray-200 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 text-center">
+            <a href="#drawings" class="block py-2 text-white hover:bg-white hover:bg-opacity-20 rounded-md transition-colors">Drawings</a>
+            <a href="#projects" class="block py-2 text-white hover:bg-white hover:bg-opacity-20 rounded-md transition-colors">Projects</a>
+            <a href="#contact" class="block py-2 text-white hover:bg-white hover:bg-opacity-20 rounded-md transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-24 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-xl animate-fade-in">Welcome to My Creative Space</h1>
+        <p class="mt-4 text-xl md:text-2xl font-light text-gray-200 drop-shadow-md">A showcase of my artistic journey and creative blueprints.</p>
+    </header>
+
+    <main class="container mx-auto p-8 space-y-20">
+
+        <!-- Drawings Section -->
+        <section id="drawings" class="bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-3xl shadow-2xl animate-slide-up">
+            <h2 class="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">My Drawings</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Placeholder for Drawing 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <img src="D:\GALLERY\IMG_20241107_181912.jpg" alt="Drawing 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-2xl font-semibold">"Abstract Landscape"</p>
+                    </div>
+                </div>
+                <!-- Placeholder for Drawing 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <img src="D:\GALLERY\IMG_20241107_181946.jpg" alt="Drawing 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-2xl font-semibold">"Digital Portrait"</p>
+                    </div>
+                </div>
+                <!-- Placeholder for Drawing 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <img src="D:\GALLERY\IMG_20240327_175900_363.jpg" alt="Drawing 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-2xl font-semibold">"Floral Sketch"</p>
+                    </div>
+                </div>
+                <!-- Add more drawing placeholders as needed -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-3xl shadow-2xl animate-slide-up">
+            <h2 class="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">My Project Blueprints</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Placeholder for Project Blueprint 1 -->
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 shadow-lg transition-transform duration-300 hover:scale-105">
+                    <img src="D:\MARK-01\IMG_20240923_124301.jpg" alt="Project 1" class="w-full rounded-xl mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Project: "IRONMAN SUIT"</h3>
+                    <p class="text-gray-200">
+                        This blueprints outlines a sustainable urban development project. It includes concepts for green spaces,
+                        renewable energy sources, and efficient public transportation systems.
+                    </p>
+                </div>
+                <!-- Placeholder for Project Blueprint 2 -->
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 shadow-lg transition-transform duration-300 hover:scale-105">
+                    <img src="D:\MARK-01\IMG_20240922_161051.jpg" alt="Project 2" class="w-full rounded-xl mb-4">
+                    <h3 class="text-2xl font-bold mb-2">IRONMAN EXO"</h3>
+                    <p class="text-gray-200">
+                        A detailed plan for a mobile application that uses branching narratives to create unique,
+                        personalized stories for users. The blueprint covers user flow, UI/UX design, and technical specifications.
+                    </p>
+                </div>
+                <!-- Add more project placeholders as needed -->
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="contact" class="bg-white bg-opacity-20 backdrop-blur-sm p-8 rounded-3xl shadow-2xl animate-slide-up text-center">
+            <h2 class="text-4xl font-bold mb-8 text-white drop-shadow-lg">Connect With Me</h2>
+            <div class="flex justify-center space-x-6">
+                <!-- Instagram Link -->
+                <a href=https://www.instagram.com/sar.tanmay?igsh=d2R3aXJvbmc1YmVq"" target="_blank" class="text-white hover:text-pink-500 transition-colors text-4xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Facebook Link -->
+                <a href="https://www.facebook.com/share/16ccSceZKm/" target="_blank" class="text-white hover:text-blue-600 transition-colors text-4xl">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- WhatsApp Link -->
+                <a href="https://wa.me/+918927624723" target="_blank" class="text-white hover:text-green-500 transition-colors text-4xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 mt-20 bg-black bg-opacity-20 text-gray-300 rounded-t-xl">
+        <p>&copy; 2025 My Creative Gallery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
